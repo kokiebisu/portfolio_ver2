@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Wrappers
-import { ContextWrapper } from '../wrapper/context';
-import { GlobalWrapper } from '../wrapper/global';
+import { ContextWrapper } from './context';
+import { GlobalWrapper } from './global';
 
 export const Wrapper = ({ children }) => {
   return (

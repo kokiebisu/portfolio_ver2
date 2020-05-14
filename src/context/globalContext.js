@@ -24,8 +24,11 @@ const globalReducer = (state, action) => {
 };
 
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(dispatch, {
-    currentTheme: 'dark',
+  const [state, dispatch] = useReducer(globalReducer, {
+    currentTheme:
+      window.localStorage.getItem('theme') === null
+        ? 'dark'
+        : window.localStorage.getItem('theme'),
     cursorType: false,
     cursorStyles: ['pointer', 'hovered'],
   });

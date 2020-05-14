@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // Wrapper
-import { Wrapper } from './wrapper';
+import { Wrapper } from './wrappers';
 
 ReactDOM.render(
   <Wrapper>
