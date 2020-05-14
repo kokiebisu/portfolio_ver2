@@ -2,13 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { useWindowSize } from '../../hooks/useWindowSize';
-import { Flex } from '../../styles/block';
-import { useGlobalStateContext } from '../../context/globalContext';
+import { useWindowSize } from '../hooks/useWindowSize';
+import { Flex, Container } from '../styles/blocks';
+import { useGlobalStateContext } from '../context/globalContext';
 
-import { Github, LinkedIn, Medium } from '../../assets/svgs/socialMedia';
-import { Notification } from '../notification';
-import { Container } from '../../styles/block';
+import { Github, LinkedIn, Medium } from '../assets/svgs/socialMedia';
+import { Notification } from './notification';
 
 export const Banner = ({ notifications }) => {
   const { currentTheme } = useGlobalStateContext();
@@ -92,7 +91,7 @@ export const Banner = ({ notifications }) => {
     <Wrapper>
       <Video>
         <video height='100%' width='100%' preload autoPlay loop muted>
-          <source src={require('../../assets/videos/homeBackground.mp4')} />
+          <source src={require('../assets/videos/homeBackground.mp4')} />
         </video>
       </Video>
       <Canvas width={size.width} height={size.height} ref={canvas} />

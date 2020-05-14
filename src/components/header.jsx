@@ -40,7 +40,7 @@ export const Header = ({ onCursor, addNotification }) => {
   return (
     <HeaderNav>
       <Container>
-        <Flex>
+        <Flex noHeight spaceBetween>
           <Logo
             onMouseEnter={() => onCursor('hovered')}
             onMouseLeave={onCursor}>

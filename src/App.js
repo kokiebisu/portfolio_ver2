@@ -17,12 +17,12 @@ function App() {
   const [notifications, setNotifications] = useState([]);
 
   const { cursorStyles } = useGlobalStateContext();
-  const { dispatch } = useGlobalDispatchContext();
+  const dispatch = useGlobalDispatchContext();
 
   const onCursor = (cursorType) => {
-    cursorType =
+    const newType =
       cursorType && cursorStyles.includes(cursorType) ? cursorType : false;
-    dispatch({ type: 'TOGGLE_CURSOR', cursor: cursorType });
+    dispatch({ type: 'TOGGLE_CURSOR', cursor: newType });
   };
 
   return (
@@ -33,7 +33,7 @@ function App() {
           setNotifications(add(notifications, number))
         }
       />
-      <Banner />
+      <Banner onCursor={onCursor} notifications={notifications} />
     </>
   );
 }

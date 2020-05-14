@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ContentPlaceholder } from './contentPlaceholder';
 import styled from 'styled-components';
-import { Flex } from '../styles/block';
+import { Flex } from '../styles/blocks';
 // Images
 import nextbnb from '../assets/images/nextbnb.png';
 import { Airbnb } from '../assets/svgs/projects';
@@ -23,6 +23,8 @@ const Accordion = ({ i, expanded, setExpanded }) => {
         return (
           <Slack width={24} height={24} color={isOpen ? 'white' : '#303030'} />
         );
+      default:
+        return;
     }
   };
 
