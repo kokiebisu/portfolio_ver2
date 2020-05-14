@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Context
 import {
@@ -10,7 +10,12 @@ import {
 import { Header } from './components/header';
 import { Banner } from './components/banner';
 
+// Helper
+import { add, remove } from './util/helper';
+
 function App() {
+  const [notifications, setNotifications] = useState([]);
+
   const { cursorStyles } = useGlobalStateContext();
   const { dispatch } = useGlobalDispatchContext();
 
@@ -22,7 +27,12 @@ function App() {
 
   return (
     <>
-      <Header onCursor={onCursor} />
+      <Header
+        onCursor={onCursor}
+        addNotification={(number) =>
+          setNotifications(add(notifications, number))
+        }
+      />
       <Banner />
     </>
   );
