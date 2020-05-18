@@ -4,11 +4,11 @@ import { ContentPlaceholder } from './contentPlaceholder';
 import styled from 'styled-components';
 import { Flex } from '../styles/blocks';
 // Images
-import nextbnb from '../assets/images/nextbnb.png';
+// import nextbnb from '../assets/images/nextbnb.png';
 import { Airbnb } from '../assets/svgs/projects';
-import slack from '../assets/images/slack.png';
+// import slack from '../assets/images/slack.png';
 import { Slack } from '../assets/svgs/projects';
-import voice from '../assets/images/voice.jpg';
+// import voice from '../assets/images/voice.jpg';
 
 const Accordion = ({ i, expanded, setExpanded }) => {
   const isOpen = i === expanded;
@@ -67,8 +67,6 @@ const Accordion = ({ i, expanded, setExpanded }) => {
 };
 
 export const Accordions = () => {
-  // This approach is if you only want max one section open at a time. If you want multiple
-  // sections to potentially be open simultaneously, they can all be given their own `useState`.
   const [expanded, setExpanded] = useState(0);
   return (
     <motion.div
@@ -108,7 +106,8 @@ const data = [
       'graphql-yoga',
       'postgresql',
     ],
-    screenshot: nextbnb,
+    screenshot:
+      'https://kokiebisuportfolio.sfo2.digitaloceanspaces.com/nextbnb.png',
     link: 'https://nextbnb.kokiebisu.now.sh',
   },
   {
@@ -123,7 +122,8 @@ const data = [
       'framer motion',
       'postgresql',
     ],
-    screenshot: slack,
+    screenshot:
+      'https://kokiebisuportfolio.sfo2.digitaloceanspaces.com/slack.png',
     link: 'https://nextbnb.kokiebisu.now.sh',
   },
   {
@@ -131,7 +131,8 @@ const data = [
     description:
       'A mobile app which enables students and teachers to send instantaneous feedbacks during class',
     stack: ['react', 'react-native', 'socket.io', 'firebase', 'express'],
-    screenshot: voice,
+    screenshot:
+      'https://kokiebisuportfolio.sfo2.digitaloceanspaces.com/voice.jpg',
     link: 'https://nextbnb.kokiebisu.now.sh',
   },
 ];
@@ -168,7 +169,7 @@ const Logo = styled.div`
 const Description = styled.div`
   padding: 0 20px;
   padding-top: 10px;
-  color: white;
+  color: ${({ theme }) => theme.color};
 `;
 
 const Section = styled(motion.section)`

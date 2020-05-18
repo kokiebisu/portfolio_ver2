@@ -106,9 +106,21 @@ export const Banner = ({ notifications }) => {
 
         <SocialMediaWrapper>
           <Flex>
-            <Github width={32} height={32} />
-            <LinkedIn width={32} height={32} />
-            <Medium width={32} height={32} />
+            <Github
+              width={32}
+              height={32}
+              link='https://github.com/kokiebisu'
+            />
+            <LinkedIn
+              width={32}
+              height={32}
+              link='https://www.linkedin.com/in/kokiebisu'
+            />
+            <Medium
+              width={32}
+              height={32}
+              link='https://medium.com/@kenichikona'
+            />
           </Flex>
         </SocialMediaWrapper>
       </Container>

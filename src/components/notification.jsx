@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { Flex } from '../styles/blocks';
-import profile from '../assets/images/profile.jpg';
 
 export const Notification = ({ id }) => {
   return (
@@ -17,7 +16,12 @@ export const Notification = ({ id }) => {
       <Flex width>
         <AvatarWrapper>
           <Avatar>
-            <img height='100%' width='100%' src={profile} alt='' />
+            <img
+              height='100%'
+              width='100%'
+              src='https://kokiebisuportfolio.sfo2.digitaloceanspaces.com/profile.jpg'
+              alt='profile'
+            />
           </Avatar>
         </AvatarWrapper>
         <Line />
@@ -82,7 +86,7 @@ const Avatar = styled.div`
 `;
 
 const Line = styled.div`
-  width: 1px;
+  width: 2px;
   height: 25px;
   margin: 0 20px;
   background-color: white;
