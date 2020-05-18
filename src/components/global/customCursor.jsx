@@ -32,7 +32,7 @@ const Cursor = styled.div`
   left: 400px;
   width: 32px;
   height: 32px;
-  background: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.pointer};
   border-radius: 99%;
   transform: translate(-50%, -50%);
   transition: all 0.1s ease-in-out;
@@ -45,10 +45,29 @@ const Cursor = styled.div`
     background: transparent !important;
     width: 56px;
     height: 56px;
-    border: 4px solid ${({ theme }) => theme.primary};
+    border: 4px solid ${({ theme }) => theme.pointer};
   }
 
   &.pointer {
-    border: 4px solid ${({ theme }) => theme.color} !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    animation: pulse 2s infinite;
+    background: ${({ theme }) => theme.pointer} !important;
+    height: 18px;
+    width: 18px;
+    border: 1px solid ${({ theme }) => theme.pointer} !important;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 ${({ theme }) => theme.pointer};
+    }
+
+    70% {
+      box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
   }
 `;

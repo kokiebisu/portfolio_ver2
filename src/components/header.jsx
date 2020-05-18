@@ -102,7 +102,7 @@ const Logo = styled(motion.div)`
     height: 18px;
     background: red;
     border-radius: 99%;
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.pointer};
     margin: 0 4px;
     display: inline-block;
   }

@@ -7,6 +7,7 @@ export const darkTheme = {
   yellow: '#ffbe0b',
   purple: '#6a4c93',
   tag: '#f7ede2',
+  pointer: '#b2ff9e',
 };
 
 export const lightTheme = {
@@ -18,4 +19,5 @@ export const lightTheme = {
   yellow: '#dab785',
   purple: '#ada7c9',
   tag: '#696969',
+  pointer: '#affc41',
 };
